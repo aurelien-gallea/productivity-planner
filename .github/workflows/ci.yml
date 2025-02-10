@@ -40,10 +40,6 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      # Tests
-      - name: Test
-        run: npm run test:ci
-
       # Set environment variables
       - name: Create environment file
         run: |
@@ -51,6 +47,10 @@ jobs:
           echo "Creating production environment file..."
           echo "${{ secrets.FIREBASE_CONFIG }}" >> environments/environment.ts
 
+      # Tests
+      - name: Test
+        run: npm run test:ci
+        
       # Build
       - name: Build
         run: npm run build
