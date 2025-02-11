@@ -55,7 +55,7 @@ jobs:
             messagingSenderId: 'mock-sender-id', 
             appId: 'mock-app-id' 
             } 
-          };" > src/environments/environment.mock.ts
+          };" > src/environments/environment.ts
 
       # Tests
       - name: Test
