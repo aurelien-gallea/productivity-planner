@@ -48,8 +48,8 @@ jobs:
           echo "${{ secrets.FIREBASE_CONFIG }}" >> environments/environment.ts
 
       # Tests
-      #- name: Test
-      # run: npm run test:ci
+      - name: Test
+        run: npm run test
         
       # Build
       - name: Build
