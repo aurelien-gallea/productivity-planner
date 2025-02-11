@@ -45,7 +45,9 @@ jobs:
         run: |
           mkdir -p src/environments
           echo "Creating production environment file..."
-          echo "${{ secrets.FIREBASE_CONFIG }}" > src/environments/environment.ts
+          cat <<EOF > src/environments/environment.ts
+      ${{ secrets.FIREBASE_CONFIG }}
+      EOF
 
       # Tests
       - name: Test
