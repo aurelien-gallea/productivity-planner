@@ -43,14 +43,16 @@ jobs:
       # Set environment variables
       - name: Create environment file
         run: |
-          mkdir environments
+          mkdir -p src/environments
           echo "Creating production environment file..."
-          echo "${{ secrets.FIREBASE_CONFIG }}" >> environments/environment.ts
+          cat <<EOF > src/environments/environment.ts
+          ${{ secrets.FIREBASE_CONFIG }}
+          EOF
 
       # Tests
-      #- name: Test
-      # run: npm run test:ci
-        
+      - name: Test
+        run: npm run test
+
       # Build
       - name: Build
         run: npm run build
