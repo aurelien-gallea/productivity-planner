@@ -24,13 +24,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # Set environment variables
-      - name: Create environment file
-        run: |
-          mkdir -p src/environments
-          echo "Creating production environment file..."
-          echo "${{ secrets.FIREBASE_CONFIG }}" >> src/environments/environment.ts
-
       # Installation des dépendances avec npm clean-install
       - name: Install dependencies
         run: npm clean-install
@@ -46,6 +39,13 @@ jobs:
       # Linter
       - name: Lint
         run: npm run lint
+
+      # Set environment variables
+      - name: Create environment file
+        run: |
+          mkdir -p src/environments
+          echo "Creating production environment file..."
+          echo "${{ secrets.FIREBASE_CONFIG }}" >> src/environments/environment.ts
 
       # Tests
       - name: Test
