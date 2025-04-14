@@ -11,7 +11,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch --onlyChanged --verbose",
-    "test:coverage" : "jest --coverage",
+    "test:coverage": "jest --coverage",
     "lint": "ng lint",
     "deploy:production": "npm run build:production && firebase use production && firebase deploy",
     "deploy:staging": "npm run build:staging && firebase use staging && firebase deploy",
@@ -28,6 +28,7 @@
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
