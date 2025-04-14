@@ -9,8 +9,7 @@ describe('HomepageFeatureCardListDumbComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HomepageFeatureCardListDumbComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HomepageFeatureCardListDumbComponent);
     component = fixture.componentInstance;
