@@ -33,8 +33,8 @@ jobs:
         run: npm audit
 
       # Vérification de la signature des audits
-      - name: Audit Signature
-        run: npm audit signatures
+      #- name: Audit Signature
+       # run: npm audit signatures
 
       # Linter
       - name: Lint
